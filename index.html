@@ -1,38 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mayank | Web Dev for IndieHackers</title>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class'
     }
   </script>
+  <style>
+    .floating-card {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .mouse-circle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 30px;
+      height: 30px;
+      background: rgba(99, 102, 241, 0.4);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+  </style>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans relative">
+
+  <div class="mouse-circle"></div>
 
   <!-- Hero -->
-  <section class="text-center py-20 bg-gray-100 dark:bg-gray-800">
+  <section class="text-center py-20 bg-gray-100 dark:bg-gray-800" data-aos="fade-down">
     <h1 class="text-4xl font-bold mb-4">I Build Clean & Fast Websites for IndieHackers 🚀</h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">Need a landing page or MVP built in days, not weeks? I got you covered.</p>
     <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700">Let’s Work Together</a>
   </section>
 
   <!-- Services -->
-  <section class="py-16 px-6 max-w-4xl mx-auto">
+  <section class="py-16 px-6 max-w-4xl mx-auto" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-center mb-10">What I Can Do for You</h2>
     <div class="grid md:grid-cols-3 gap-6 text-center">
-      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg">
+      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg floating-card">
         <h3 class="font-bold text-lg mb-2">Landing Pages</h3>
         <p>High-converting, responsive designs tailored to your product.</p>
       </div>
-      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg">
+      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg floating-card">
         <h3 class="font-bold text-lg mb-2">MVP Development</h3>
         <p>From idea to launch — fast, functional web apps using HTML/CSS/JS.</p>
       </div>
-      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg">
+      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg floating-card">
         <h3 class="font-bold text-lg mb-2">UI Improvements</h3>
         <p>Revamp your existing website for better UX & speed.</p>
       </div>
@@ -40,7 +70,7 @@
   </section>
 
   <!-- Portfolio -->
-  <section class="py-16 px-6 bg-gray-50 dark:bg-gray-800">
+  <section class="py-16 px-6 bg-gray-50 dark:bg-gray-800" data-aos="fade-right">
     <h2 class="text-2xl font-bold text-center mb-10">Past Work</h2>
     <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
       <div class="bg-white dark:bg-gray-900 shadow p-4 rounded-lg">
@@ -59,9 +89,9 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-indigo-600 text-white text-center">
-    <h2 class="text-3xl font-bold mb-4">Let’s Build Something Great!</h2>
-    <p class="mb-6">Fill out the form below and I’ll get back to you soon.</p>
+  <section id="contact" class="py-20 bg-indigo-600 text-white text-center" data-aos="zoom-in-up">
+    <h2 class="text-3xl font-bold mb-4">Let's Build Something Great!</h2>
+    <p class="mb-6">Fill out the form below and I'll get back to you soon.</p>
     <form action="https://formspree.io/f/mnqeqrly" method="POST" class="max-w-md mx-auto bg-white dark:bg-gray-800 p-6 rounded shadow text-indigo-700 dark:text-indigo-300">
       <input type="text" name="name" placeholder="Your Name" class="w-full mb-3 p-2 rounded border dark:border-gray-600 dark:bg-gray-900 dark:text-white" required />
       <input type="email" name="email" placeholder="Your Email" class="w-full mb-3 p-2 rounded border dark:border-gray-600 dark:bg-gray-900 dark:text-white" required />
@@ -74,5 +104,16 @@
     © 2025 Mayank. Built for IndieHackers.
   </footer>
 
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const circle = document.querySelector('.mouse-circle');
+    document.addEventListener('mousemove', e => {
+      circle.style.top = e.clientY + 'px';
+      circle.style.left = e.clientX + 'px';
+    });
+  </script>
 </body>
 </html>
