@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayank | Web Dev for IndieHackers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
+
+  <!-- Hero -->
+  <section class="text-center py-20 bg-gray-100 dark:bg-gray-800">
+    <h1 class="text-4xl font-bold mb-4">I Build Clean & Fast Websites for IndieHackers 🚀</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">Need a landing page or MVP built in days, not weeks? I got you covered.</p>
+    <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700">Let’s Work Together</a>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-10">What I Can Do for You</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg">
+        <h3 class="font-bold text-lg mb-2">Landing Pages</h3>
+        <p>High-converting, responsive designs tailored to your product.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg">
+        <h3 class="font-bold text-lg mb-2">MVP Development</h3>
+        <p>From idea to launch — fast, functional web apps using HTML/CSS/JS.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 shadow rounded-lg">
+        <h3 class="font-bold text-lg mb-2">UI Improvements</h3>
+        <p>Revamp your existing website for better UX & speed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="py-16 px-6 bg-gray-50 dark:bg-gray-800">
+    <h2 class="text-2xl font-bold text-center mb-10">Past Work</h2>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="bg-white dark:bg-gray-900 shadow p-4 rounded-lg">
+        <p class="font-semibold">SaaS Landing Page</p>
+        <img src="img/saas-landing-page.avif" class="mt-2 rounded" alt="SaaS project">
+      </div>
+      <div class="bg-white dark:bg-gray-900 shadow p-4 rounded-lg">
+        <p class="font-semibold">Blog Website</p>
+        <img src="img/blog-project.jpeg" class="mt-2 rounded" alt="Blog project">
+      </div>
+      <div class="bg-white dark:bg-gray-900 shadow p-4 rounded-lg">
+        <p class="font-semibold">E-commerce UI</p>
+        <img src="img/e-commerce-ui.png" class="mt-2 rounded" alt="Ecom project">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-indigo-600 text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">Let’s Build Something Great!</h2>
+    <p class="mb-6">Fill out the form below and I’ll get back to you soon.</p>
+    <form action="https://formspree.io/f/mnqeqrly" method="POST" class="max-w-md mx-auto bg-white dark:bg-gray-800 p-6 rounded shadow text-indigo-700 dark:text-indigo-300">
+      <input type="text" name="name" placeholder="Your Name" class="w-full mb-3 p-2 rounded border dark:border-gray-600 dark:bg-gray-900 dark:text-white" required />
+      <input type="email" name="email" placeholder="Your Email" class="w-full mb-3 p-2 rounded border dark:border-gray-600 dark:bg-gray-900 dark:text-white" required />
+      <textarea name="message" rows="4" placeholder="Your Message" class="w-full mb-3 p-2 rounded border dark:border-gray-600 dark:bg-gray-900 dark:text-white" required></textarea>
+      <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="text-center py-6 text-sm bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
+    © 2025 Mayank. Built for IndieHackers.
+  </footer>
+
+</body>
+</html>
